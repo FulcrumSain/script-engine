@@ -547,7 +547,7 @@ body {
       <!-- Google Sign-In (shown when not signed in) -->
       <div id="googleSignInArea">
         <div id="g_id_onload"
-          data-client_id="YOUR_GOOGLE_CLIENT_ID"
+          data-client_id="797327287631-pqf7ssae4i794haji48t2ve9nm4cc57c.apps.googleusercontent.com"
           data-callback="handleCredentialResponse"
           data-auto_prompt="false">
         </div>
@@ -663,7 +663,7 @@ body {
 // For local dev, use 'http://localhost:5000'
 const API_URL = window.location.hostname === 'localhost'
   ? 'http://localhost:5000'
-  : 'https://YOUR-BACKEND-URL.onrender.com'; // ← update after deploy
+  : 'https://script-engine.onrender.com'; // ← update after deploy
 
 // ── STATE ────────────────────────────────────────
 let googleAccessToken = null;
@@ -683,7 +683,7 @@ function handleCredentialResponse(response) {
 function initGoogleAuth() {
   // Use Google Identity Services for OAuth2 access token (needed for Docs API)
   window.tokenClient = google.accounts.oauth2.initTokenClient({
-    client_id: 'YOUR_GOOGLE_CLIENT_ID', // ← set this
+    client_id: '797327287631-pqf7ssae4i794haji48t2ve9nm4cc57c.apps.googleusercontent.com', // ← set this
     scope: 'https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/drive.file profile email',
     callback: (tokenResponse) => {
       if (tokenResponse.access_token) {
